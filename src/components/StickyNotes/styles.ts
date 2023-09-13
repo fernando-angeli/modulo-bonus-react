@@ -18,7 +18,7 @@ export const Container = styled.div`
     margin: 3rem 0;
 
     > h1 {
-      color: var(--purple-900);
+      color: var(--blue-900);
       font-family: "Roboto";
     }
   }
@@ -49,16 +49,18 @@ export const Grid = styled.div`
     padding: 1rem;
     gap: 1rem;
 
-    background-color: var(--purple-300);
-    border-radius: 0.4rem;
+    -webkit-box-shadow: 2px 8px 8px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 8px 8px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 8px 8px -1px rgba(0, 0, 0, 0.75);
 
     > h2 {
       font-family: "Roboto";
-      color: var(--font-black);
+      color: var(--black);
     }
     > p {
       font-family: "Roboto";
       width: 90%;
+      color: var(--font-black);
 
       overflow: auto;
       text-align: center;

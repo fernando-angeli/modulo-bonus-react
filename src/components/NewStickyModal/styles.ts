@@ -17,7 +17,7 @@ export const Container = styled.form`
   left: 50%;
   transform: translate(-50%, -50%);
 
-  background-color: var(--font-white);
+  background-color: var(--gray-100);
   border-radius: 8px;
 
   > div {
@@ -33,7 +33,7 @@ export const Container = styled.form`
     > input,
     textarea {
       width: 100%;
-      border: 1px solid #7c7c7c;
+      border: 1px solid var(--gray-600);
       border-radius: 0.5rem;
       padding: 0.4rem;
     }
@@ -47,7 +47,7 @@ export const Container = styled.form`
   }
 
   h1 {
-    color: var(--purple-900);
+    color: var(--blue-900);
     font-family: "Roboto";
   }
 `;

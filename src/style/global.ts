@@ -3,12 +3,15 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
 
 :root {
-  --purple-300: rgba(85, 49, 255, 0.25);
-  --purple-600: #5531FF;
-  --purple-900: #150057;
+  --black: #020202;
+  --blue-900: #0d324d;
+  --blue-300: #5eb1bf;
+  --gray-100: #dddbcd;
+  --gray-600: #8f8f8f;
   
-  --font-black: #1c1c1c;
-  --font-white: #fff;
+  --sticky-1: #d6e77c;
+  --sticky-2: #a7e7f5;
+  --sticky-3: #f8c242;
 }
 
 *{

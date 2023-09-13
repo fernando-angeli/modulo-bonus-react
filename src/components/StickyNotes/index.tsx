@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Container, Grid } from "./styles";
 import NotesContext from "../../hooks/notesContext";
 //import { For } from "million/react";
@@ -7,6 +7,24 @@ import NotesContext from "../../hooks/notesContext";
 export function StickyNotes() {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { notes } = useContext<any>(NotesContext);
+  const [currentColorSticky, setCurrentColorSticky] = useState(1);
+
+  /*useEffect(() => {
+    if (currentColorSticky < 3) setCurrentColorSticky(currentColorSticky + 1);
+    else setCurrentColorSticky(1);
+  }, [currentColorSticky]);*/
+
+  function renderSticky(note: any, index: number) {
+    return (
+      <div
+        key={index}
+        style={{ background: `var(--sticky-${currentColorSticky})` }}
+      >
+        <h2>{note.title}</h2>
+        <p>{note.description}</p>
+      </div>
+    );
+  }
 
   return (
     <Container>
@@ -14,24 +32,8 @@ export function StickyNotes() {
         <h1>Lembretes - {notes.length}</h1>
       </div>
       <Grid>
-        {notes.map((note: any, index: number) => (
-          <div key={index}>
-            <h2>{note.title}</h2>
-            <p>{note.description}</p>
-          </div>
-        ))}
+        {notes.map((note: any, index: number) => renderSticky(note, index))}
       </Grid>
     </Container>
   );
 }
-
-/*
-<For each={notes} as="div">
-{(notes: any) => (
-  <div key={notes.title}>
-    <h2>{notes.title}</h2>
-    <p>{notes.description}</p>
-  </div>
-)}
-</For>
-*/
