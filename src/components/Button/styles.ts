@@ -17,5 +17,6 @@ export const Container = styled.button`
   &:hover {
     cursor: pointer;
     opacity: 0.8;
+    color: var(--write);
   }
 `;

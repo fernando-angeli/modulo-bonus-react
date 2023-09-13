@@ -17,7 +17,7 @@ export const Container = styled.form`
   left: 50%;
   transform: translate(-50%, -50%);
 
-  background-color: var(--gray-100);
+  background-color: var(--write);
   border-radius: 8px;
 
   > div {
@@ -43,6 +43,40 @@ export const Container = styled.form`
       max-width: 100%;
       min-height: 8rem;
       min-width: 100%;
+    }
+
+    > div {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 3rem;
+      padding: 0.4rem;
+
+      border: 1px solid var(--gray-600);
+      border-radius: 0.5rem;
+
+      label {
+        width: 100%;
+        font-family: "Roboto";
+        font-size: 0.8rem;
+      }
+      .sticky {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .sticky1 {
+        background-color: var(--sticky-1);
+      }
+      .sticky2 {
+        background-color: var(--sticky-2);
+      }
+      .sticky3 {
+        background-color: var(--sticky-3);
+      }
     }
   }
 

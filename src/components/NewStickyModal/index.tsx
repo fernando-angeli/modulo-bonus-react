@@ -14,12 +14,14 @@ Modal.setAppElement("#root");
 export function NewStickyModal({ isOpen, onRequestClose }: ModelProps) {
   const [stickyName, setStickyName] = useState("");
   const [stickyDescription, setStickyDescription] = useState("");
+  const [stickyColor, setStickyColor] = useState("");
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { notes, setNotes } = useContext<any>(NotesContext);
 
   const formData = {
     title: stickyName,
     description: stickyDescription,
+    color: stickyColor,
   };
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -49,6 +51,33 @@ export function NewStickyModal({ isOpen, onRequestClose }: ModelProps) {
             placeholder="Descrição"
             onChange={(event) => setStickyDescription(event.target.value)}
           />
+          <div>
+            <label>Selecione a cor</label>
+            <div className="sticky sticky1">
+              <input
+                type="radio"
+                value={1}
+                name="color"
+                onChange={(event) => setStickyColor(event.target.value)}
+              />
+            </div>
+            <div className="sticky sticky2">
+              <input
+                type="radio"
+                value={2}
+                name="color"
+                onChange={(event) => setStickyColor(event.target.value)}
+              />
+            </div>
+            <div className="sticky sticky3">
+              <input
+                type="radio"
+                value={3}
+                name="color"
+                onChange={(event) => setStickyColor(event.target.value)}
+              />
+            </div>
+          </div>
         </div>
         <Button
           title="Adicionar lembrete"
